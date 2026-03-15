@@ -2,6 +2,7 @@ import React from 'react'
 import { usePerformanceEngine } from './hooks/usePerformanceEngine'
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleSimulating } from './store/metricsSlice';
+import Header from './components/Header';
 
 const App = () => {
 
@@ -12,19 +13,7 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={()=>dispatch(toggleSimulating())}>Toggle</button>
-
-      <div>
-        <p>
-          Re-Renders: {reRenders}
-        </p>
-        <p>
-          apiSpeed:{apiSpeed}
-        </p>
-        <p>
-          MemoryUsage:{memoryUsage}
-        </p>
-      </div>
+      <Header />
     </div>
   )
 }
