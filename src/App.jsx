@@ -3,6 +3,7 @@ import { usePerformanceEngine } from './hooks/usePerformanceEngine'
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleSimulating } from './store/metricsSlice';
 import Header from './components/Header';
+import MainContent from './components/MainContent';
 
 const App = () => {
 
@@ -12,8 +13,9 @@ const App = () => {
   const { reRenders, apiSpeed, memoryUsage } = useSelector((state) => state.metrics);
 
   return (
-    <div>
+    <div className='bg-gray-50 min-h-screen'>
       <Header />
+      <MainContent />
     </div>
   )
 }
